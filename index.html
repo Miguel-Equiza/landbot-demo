@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landbot Demo</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    nav a { margin-right: 1rem; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- load navbar -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      });
+  </script>
+
+  <h1>Landbot Demo Pages</h1>
+  <p>Click a link above to see each integration in action.</p>
+</body>
+</html>
